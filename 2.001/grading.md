@@ -5,11 +5,3 @@
 | Quiz 1             | 24%    |
 | Quiz 2             | 24%    |
 | Final Exam         | 34%    |
-
-```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
