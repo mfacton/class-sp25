@@ -18,6 +18,9 @@
             </style>
             <h1>HELLO WORLD!</h1>
         </div>
+        <script>
+        alert('hello');
+        </script>
     </foreignObject>
 </svg>
 
