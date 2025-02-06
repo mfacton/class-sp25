@@ -1,0 +1,51 @@
+name: Merge Grading Files
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow on push to the main branch
+
+jobs:
+  merge-grading-files:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Merge grading.md files
+      id: merge
+      run: |
+        # Define the folders containing grading.md
+        folders=("2.001" "21m.361" "6.230" "6.250" "6.300")
+        
+        # Create a new markdown file
+        output_file="merged_grading.md"
+        echo "# Merged Grading Information" > $output_file
+        
+        # Loop through each folder and append the content of grading.md
+        for folder in "${folders[@]}"; do
+          if [ -f "$folder/grading.md" ]; then
+            echo -e "\n## $folder\n" >> $output_file
+            cat "$folder/grading.md" >> $output_file
+          else
+            echo "Warning: $folder/grading.md not found"
+          fi
+        done
+        
+        # Output the path to the merged file for use in subsequent steps
+        echo "output_file=$output_file" >> $GITHUB_OUTPUT
+
+    - name: Upload merged file as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: merged-grading
+        path: ${{ steps.merge.outputs.output_file }}
+
+    - name: Commit and push the merged file
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git add merged_grading.md
+        git commit -m "Automated merge of grading.md files"
+        git push
