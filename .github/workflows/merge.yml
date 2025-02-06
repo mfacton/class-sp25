@@ -20,7 +20,7 @@ jobs:
         folders=("2.001" "21m.361" "6.230" "6.250" "6.300")
         
         # Create a new markdown file
-        output_file="merged_grading.md"
+        output_file="README.md"
         echo "# Merged Grading Information" > $output_file
         
         # Loop through each folder and append the content of grading.md
