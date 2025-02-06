@@ -17,10 +17,10 @@
             }
             </style>
             <h1>HELLO WORLD!</h1>
+            <script>
+            alert('hello');
+            </script>
         </div>
-        <script>
-        alert('hello');
-        </script>
     </foreignObject>
 </svg>
 
