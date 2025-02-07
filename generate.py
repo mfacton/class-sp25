@@ -34,8 +34,11 @@ def format_events(events):
             if delta_days < 0:
                 emoji = "🟢"  # Green square for past dates
                 days_text = f"({abs(delta_days)} days ago)"
+            elif delta_days <= 7:
+                emoji = "🔴"  # Red square for events less than 7 days away
+                days_text = f"(in {delta_days} days)"
             else:
-                emoji = "🔴"  # Red square for upcoming dates
+                emoji = "🟡"  # Yellow square for events more than 7 days away
                 days_text = f"(in {delta_days} days)"
         content += f"{emoji} **{event['event']}**  \n  Date: {event['date']} {days_text}  \n  Time: {event['time']}  \n  Location: {event['location']}\n\n"
     return content.strip()
