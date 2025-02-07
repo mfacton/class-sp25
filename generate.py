@@ -22,7 +22,7 @@ def process_json_folders(folders, file_name):
     return "\n\n".join(content)
 
 def format_events(events):
-    content = "### Dates\n\n"
+    content = ""
     current_date = datetime.now()
     for event in events:
         if event['date'].lower() == "tbd":
