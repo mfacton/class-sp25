@@ -22,22 +22,26 @@ def process_json_folders(folders, file_name):
     return "\n\n".join(content)
 
 def format_events(events):
-    content = "### Dates\n\n"
+    content = "### Dates\n\n```diff\n"
     current_date = datetime.now()
     for event in events:
         if event['date'].lower() == "tbd":
-            prefix = ""
+            content += f"  **{event['event']}**  \n  Date: TBD  \n  Time: {event['time']}  \n  Location: {event['location']}\n\n"
         else:
             event_date = datetime.strptime(event['date'], "%Y-%m-%d")
-            if event_date < current_date:
+            delta_days = (event_date - current_date).days
+            if delta_days < 0:
                 prefix = "-"
+                days_text = f"({abs(delta_days)} days ago)"
             else:
                 prefix = "+"
-        content += f"{prefix} **{event['event']}**  \nDate: {event['date']}  \nTime: {event['time']}  \nLocation: {event['location']}\n\n"
+                days_text = f"(in {delta_days} days)"
+            content += f"{prefix} **{event['event']}**  \n  Date: {event['date']} {days_text}  \n  Time: {event['time']}  \n  Location: {event['location']}\n\n"
+    content += "```"
     return content.strip()
 
 def format_grading(grading):
-    content = "### Grading Breakdown\n\n"
+    content = "### Grading\n\n"
     content += "| Assessment | Weight |\n"
     content += "|------------|--------|\n"
     for item in grading:
