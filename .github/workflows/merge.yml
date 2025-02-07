@@ -13,34 +13,20 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Merge grading.md files
-      id: merge
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.9"
+
+    - name: Run generate.py
       run: |
-        # Define the folders containing grading.md
-        folders=("2.001" "21m.361" "6.230" "6.250" "6.300")
-        
-        # Create a new markdown file
-        output_file="README.md"
-        echo "# Merged Grading Information" > $output_file
-        
-        # Loop through each folder and append the content of grading.md
-        for folder in "${folders[@]}"; do
-          if [ -f "$folder/grading.md" ]; then
-            echo -e "\n## $folder\n" >> $output_file
-            cat "$folder/grading.md" >> $output_file
-          else
-            echo "Warning: $folder/grading.md not found"
-          fi
-        done
-        
-        # Output the path to the merged file for use in subsequent steps
-        echo "output_file=$output_file" >> $GITHUB_OUTPUT
+        python generate.py
 
     - name: Upload merged file as artifact
       uses: actions/upload-artifact@v4
       with:
         name: merged-grading
-        path: ${{ steps.merge.outputs.output_file }}
+        path: README.md
 
     - name: Commit and push the merged file
       run: |
@@ -49,7 +35,7 @@ jobs:
         
         if [[ $(git status --porcelain) ]]; then
           git add README.md
-          git commit -m "Automated merge of grading.md files"
+          git commit -m "Automated merge of grading.md and dates.md files"
           git push origin main
         else
           echo "No changes to commit."
