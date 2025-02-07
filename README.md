@@ -48,7 +48,11 @@ Blah Blah Blah
 | Quiz 2             | 24%    |
 | Final Exam         | 34%    |
 
+<<<<<<< HEAD
 ### 21m.361
+=======
+## 21m.361
+>>>>>>> 70a6c515e6440361cfc7641c7fbbd77ce2f57767
 
 Unknown
 
