@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 
 def read_json(filepath):
     try:
@@ -22,14 +23,25 @@ def process_json_folders(folders, file_name):
 
 def format_events(events):
     content = "### Dates\n\n"
+    current_date = datetime.now()
     for event in events:
-        content += f"**{event['event']}**  \nDate: {event['date']}  \nTime: {event['time']}  \nLocation: {event['location']}\n\n"
+        if event['date'].lower() == "tbd":
+            prefix = ""
+        else:
+            event_date = datetime.strptime(event['date'], "%Y-%m-%d")
+            if event_date < current_date:
+                prefix = "-"
+            else:
+                prefix = "+"
+        content += f"{prefix} **{event['event']}**  \nDate: {event['date']}  \nTime: {event['time']}  \nLocation: {event['location']}\n\n"
     return content.strip()
 
 def format_grading(grading):
     content = "### Grading Breakdown\n\n"
+    content += "| Assessment | Weight |\n"
+    content += "|------------|--------|\n"
     for item in grading:
-        content += f"- {item['type']}: {item['percent']*100:.0f}%\n"
+        content += f"| {item['type']} | {item['percent']*100:.0f}% |\n"
     return content.strip()
 
 def generate():
