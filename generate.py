@@ -22,26 +22,26 @@ def process_json_folders(folders, file_name):
     return "\n\n".join(content)
 
 def format_events(events):
-    content = "### Dates\n\n```diff\n"
+    content = "### Dates\n\n"
     current_date = datetime.now()
     for event in events:
         if event['date'].lower() == "tbd":
-            content += f"  **{event['event']}**  \n  Date: TBD  \n  Time: {event['time']}  \n  Location: {event['location']}\n\n"
+            emoji = "⚪"  # Gray square for TBD
+            days_text = ""
         else:
             event_date = datetime.strptime(event['date'], "%Y-%m-%d")
             delta_days = (event_date - current_date).days
             if delta_days < 0:
-                prefix = "-"
+                emoji = "🟢"  # Green square for past dates
                 days_text = f"({abs(delta_days)} days ago)"
             else:
-                prefix = "+"
+                emoji = "🔴"  # Red square for upcoming dates
                 days_text = f"(in {delta_days} days)"
-            content += f"{prefix} **{event['event']}**  \n  Date: {event['date']} {days_text}  \n  Time: {event['time']}  \n  Location: {event['location']}\n\n"
-    content += "```"
+        content += f"{emoji} **{event['event']}**  \n  Date: {event['date']} {days_text}  \n  Time: {event['time']}  \n  Location: {event['location']}\n\n"
     return content.strip()
 
 def format_grading(grading):
-    content = "### Grading\n\n"
+    content = "### Grading Breakdown\n\n"
     content += "| Assessment | Weight |\n"
     content += "|------------|--------|\n"
     for item in grading:
