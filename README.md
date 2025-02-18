@@ -8,12 +8,12 @@ Blah Blah Blah
 ### 2.001
 
 🟡 **Quiz 1**  
-  Date: 2025-03-10 (in 26 days)  
+  Date: 2025-03-10 (in 19 days)  
   Time: 11:00-12:00  
   Location: 45-230
 
 🟡 **Quiz 2**  
-  Date: 2025-04-16 (in 63 days)  
+  Date: 2025-04-16 (in 56 days)  
   Time: 11:00-12:00  
   Location: 45-230
 
@@ -25,51 +25,51 @@ Blah Blah Blah
 ### 6.230
 
 🟡 **Quiz 1**  
-  Date: 2025-03-17 (in 33 days)  
+  Date: 2025-03-17 (in 26 days)  
   Time: 11:00-12:00  
   Location: 32-144
 
 🟡 **Quiz 2**  
-  Date: 2025-04-28 (in 75 days)  
+  Date: 2025-04-28 (in 68 days)  
   Time: 11:00-12:00  
   Location: 32-144
 
 🟡 **Final**  
-  Date: 2025-05-13 (in 90 days)  
+  Date: 2025-05-13 (in 83 days)  
   Time: 10:00-12:00  
   Location: TBA
 
 ### 6.250
 
 🟡 **Mid-Term**  
-  Date: 2025-04-02 (in 49 days)  
+  Date: 2025-04-02 (in 42 days)  
   Time: Evening  
   Location: 32-124
 
 🟡 **Project START (???????)**  
-  Date: 2025-04-18 (in 65 days)  
+  Date: 2025-04-18 (in 58 days)  
   Time: ?????????  
   Location: TBD
 
 🟡 **Project Due**  
-  Date: 2025-05-09 (in 86 days)  
+  Date: 2025-05-09 (in 79 days)  
   Time: ?????????  
   Location: TBD
 
 🟡 **Final Exam**  
-  Date: 2025-05-17 (in 94 days)  
+  Date: 2025-05-17 (in 87 days)  
   Time: 3 hours  
   Location: TBD
 
 ### 6.300
 
 🟡 **Quiz 1**  
-  Date: 2025-03-04 (in 20 days)  
+  Date: 2025-03-04 (in 13 days)  
   Time: TBD  
   Location: TBD
 
 🟡 **Quiz 2**  
-  Date: 2025-04-15 (in 62 days)  
+  Date: 2025-04-15 (in 55 days)  
   Time: TBD  
   Location: TBD
 
