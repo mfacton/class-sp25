@@ -1,0 +1,51 @@
+* Meeting Times
+  - 03/02/2025 7:30, everyone,  4hrs
+  - 03/03/2025 10:30, everyone, 3hrs
+
+* Parts Discussed/Completed
+  - Problem 4 on PSET 3
+  - All lab
+
+* Notes
+  - Long/Short Ethernet CAT6 Cables
+  - Ethernet charactersitic impedence 100 Ohms +/-15%
+  - Frequency up to 250Mhz but higher almost always works
+  - Shorter cable about 1.5ft
+  - Long cable measured with ruler 10.5ft
+
+* Procedure
+  - Start stop freq 50khz 500Mhz
+  - Set points to 114
+  - Set exitation to STEP
+  - Enable transform
+  - Set trace format to REAL
+  - Calibrate to end of short ethernet cable
+
+* Q1
+  {short_open.jpg} [Short Cable Open]
+  The short cable itself is close to a perfect positive (+1) step response with no delay.
+  {long_open.jpg} [Long Cable Open]
+  The long calbe itself is close to a perfect positive (+1) step response with the delay of the extra length.
+  This makes sense because the cable itself is open for both cables, the only difference is the delay.
+  It also makes sense that the reflection coefficient is close to 1 because its an open reflection
+
+* Q2
+  Propegation speed is around 70% of c (speed of light)
+  This is because of the permitivity of the material (epsilon)
+  Delay to slope is 24.7ns
+  Round trip = 24ns * 0.7 * c = 5m
+  Single trip = 2.5m = 8.25ft
+  We add the length of the short cable because of the location of our calibration to get length = 9.75ft
+  {long_open.jpg} [Long Cable Open]
+  For open, it delays then goes to reflection coefficient 1
+  {long_short.jpg} [Long Cable Short]
+  For short, it delays then goes to reflection coefficient -1
+  {long_match.jpg} [Long Cable Match]
+  For matched, it stays at roughly reflection coeffecient 0
+  {long_r1.jpg} [Long Cable R1]
+  For R1, it still reflects at the same time delay, however to coefficient of 0.38, not 1
+
+  Yes this matches our expectations
+  $alpha + beta$
+
+* Q3
