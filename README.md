@@ -7,13 +7,13 @@ Blah Blah Blah
 ## Important Dates
 ### 2.001
 
-🟡 **Quiz 1**  
-  Date: 2025-03-10 (in 19 days)  
+🔴 **Quiz 1**  
+  Date: 2025-03-10 (in 5 days)  
   Time: 11:00-12:00  
   Location: 45-230
 
 🟡 **Quiz 2**  
-  Date: 2025-04-16 (in 56 days)  
+  Date: 2025-04-16 (in 42 days)  
   Time: 11:00-12:00  
   Location: 45-230
 
@@ -25,51 +25,51 @@ Blah Blah Blah
 ### 6.230
 
 🟡 **Quiz 1**  
-  Date: 2025-03-17 (in 26 days)  
+  Date: 2025-03-17 (in 12 days)  
   Time: 11:00-12:00  
   Location: 32-144
 
 🟡 **Quiz 2**  
-  Date: 2025-04-28 (in 68 days)  
+  Date: 2025-04-28 (in 54 days)  
   Time: 11:00-12:00  
   Location: 32-144
 
 🟡 **Final**  
-  Date: 2025-05-13 (in 83 days)  
+  Date: 2025-05-13 (in 69 days)  
   Time: 10:00-12:00  
   Location: TBA
 
 ### 6.250
 
 🟡 **Mid-Term**  
-  Date: 2025-04-02 (in 42 days)  
+  Date: 2025-04-02 (in 28 days)  
   Time: Evening  
   Location: 32-124
 
 🟡 **Project START (???????)**  
-  Date: 2025-04-18 (in 58 days)  
+  Date: 2025-04-18 (in 44 days)  
   Time: ?????????  
   Location: TBD
 
 🟡 **Project Due**  
-  Date: 2025-05-09 (in 79 days)  
+  Date: 2025-05-09 (in 65 days)  
   Time: ?????????  
   Location: TBD
 
 🟡 **Final Exam**  
-  Date: 2025-05-17 (in 87 days)  
+  Date: 2025-05-17 (in 73 days)  
   Time: 3 hours  
   Location: TBD
 
 ### 6.300
 
-🟡 **Quiz 1**  
-  Date: 2025-03-04 (in 13 days)  
+🟢 **Quiz 1**  
+  Date: 2025-03-04 (1 days ago)  
   Time: TBD  
   Location: TBD
 
 🟡 **Quiz 2**  
-  Date: 2025-04-15 (in 55 days)  
+  Date: 2025-04-15 (in 41 days)  
   Time: TBD  
   Location: TBD
 
