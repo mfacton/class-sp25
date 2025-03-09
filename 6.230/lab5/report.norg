@@ -1,6 +1,6 @@
 * Meeting Times
   - 03/02/2025 7:30, everyone,  4hrs
-  - 03/03/2025 10:30, everyone, 3hrs
+  - 03/03/2025 10:30, everyone, 6hrs
 
 * Parts Discussed/Completed
   - Problem 4 on PSET 3
@@ -12,6 +12,8 @@
   - Frequency up to 250Mhz but higher almost always works
   - Shorter cable about 1.5ft
   - Long cable measured with ruler 10.5ft
+  - Bandpass is not valid for TDR
+  - Step lets us observe how the signal changes over time
 
 * Procedure
   - Start stop freq 50khz 500Mhz
